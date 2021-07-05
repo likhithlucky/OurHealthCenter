@@ -45,5 +45,12 @@ public interface PatientService {
 	  */
 	 
 	 public void updatePatient(Patient patient) throws ResourceNotFoundException;
+	 /**
+	  * 
+	  * @param name
+	  * @return Patient details
+	  * @throws ResourceNotFoundException
+	  */
+	 public Patient findPatientbyName(String name) throws ResourceNotFoundException;
 
 }

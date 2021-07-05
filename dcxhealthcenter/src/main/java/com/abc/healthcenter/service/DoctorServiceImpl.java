@@ -69,7 +69,7 @@ public class DoctorServiceImpl implements DoctorService {
 			return doctor;
 		}
 		else {
-			throw new ResourceNotFoundException("Cannot find doctor with this ID"+id);
+			throw new ResourceNotFoundException("Cannot find doctor with this ID : "+id);
 		}
 		
 	}
@@ -86,7 +86,7 @@ public class DoctorServiceImpl implements DoctorService {
 			doctorRepository.deleteById(id);
 		}
 		else {
-			throw new ResourceNotFoundException("Cannot find doctor with this ID "+id);
+			throw new ResourceNotFoundException("Cannot find doctor with this ID : " +id);
 		}
 		
 	}

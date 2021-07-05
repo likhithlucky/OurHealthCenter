@@ -38,9 +38,7 @@ public class AppointmentEntity {
 	private BillEntity bill;
 
 	
-	public int getAppointmentSlot() {
-		return AppointmentSlot;
-	}
+	
 
 	public int getAppointmentId() {
 		return AppointmentId;
@@ -58,7 +56,7 @@ public class AppointmentEntity {
 		AppointmentDate = appointmentDate;
 	}
 
-	public int getSlot() {
+	public int getAppointmentSlot() {
 		return AppointmentSlot;
 	}
 
