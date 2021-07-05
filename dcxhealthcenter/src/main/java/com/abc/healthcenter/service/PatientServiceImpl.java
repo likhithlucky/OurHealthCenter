@@ -18,7 +18,7 @@ import com.abc.healthcenter.model.Patient;
 import com.abc.healthcenter.repository.PatientRepository;
 
 /**
- * @author admin
+ * @author likhith A S
  *
  * date: Jul 5, 2021
 
@@ -29,7 +29,7 @@ public class PatientServiceImpl implements PatientService{
 	 @Autowired
 	    private PatientRepository patientRepository;
 	/**
-	 * Implements Save Patient Details Implements delete doctor by Id from DoctorService Interface
+	 * Implements Save Patient Details  from PatientService Interface
 	 * {@inheritdoc}
 	 */
 

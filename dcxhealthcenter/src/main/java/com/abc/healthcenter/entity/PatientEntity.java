@@ -11,7 +11,12 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+/**
+ * 
+ * @author likhith  A S
+ *
+ * date: Jul 5, 2021
+ */
 
 @Entity
 @Table (name = "patient_tbl")
@@ -54,100 +59,192 @@ public class PatientEntity {
 	private List<PaymentEntity> payments = new ArrayList<>();
 	
 
-
+	/**
+	 * getter method for patient username
+	 * @return patientuserName
+	 */
 	public String getPatientuserName() {
 		return patientuserName;
 	}
-
+	/**
+	 * setter method for patient username
+	 * @param patientuserName
+	 */
 	public void setPatientuserName(String patientuserName) {
 		this.patientuserName = patientuserName;
 	}
-
+	
+	/**
+	 * getter method for patient password
+	 * @return patientpassword
+	 */
 	public String getPatientpassword() {
 		return patientpassword;
 	}
-
+	/**
+	 * setter method for patient password
+	 * @param patientpassword
+	 */
 	public void setPatientpassword(String patientpassword) {
 		this.patientpassword = patientpassword;
 	}
-
+	
+	/**
+	 * getter method for patient appointment
+	 * @return appointments
+	 */
 	public List<AppointmentEntity> getAppointments() {
 		return appointments;
 	}
-
+	
+	/**
+	 * setter method for patient appointment
+	 * @param appointments
+	 */
 	public void setAppointments(List<AppointmentEntity> appointments) {
 		this.appointments = appointments;
 	}
-
+	
+	/**
+	 * getter method for patient payments
+	 * @return payments
+	 */
 	public List<PaymentEntity> getPayments() {
 		return payments;
 	}
-
+	
+	/**
+	 * setter method for patient payments
+	 * @param payments
+	 */
 	public void setPayments(List<PaymentEntity> payments) {
 		this.payments = payments;
 	}
-
 	
+	
+	/**
+	 * getter method for patient id
+	 * @return patientId
+	 */
 	public int getPatientId() {
 		return patientId;
 	}
-
+	
+	/**
+	 * setter method for patient id
+	 * @param patientId
+	 */
 	public void setPatientId(int patientId) {
 		this.patientId = patientId;
 	}
-
+	
+	/**
+	 * getter method for patient name
+	 * @return patientName
+	 */
 	public String getPatientName() {
 		return patientName;
 	}
-
+	
+	/**
+	 * setter method for patient name
+	 * @param patientName
+	 */
 	public void setPatientName(String patientName) {
 		this.patientName = patientName;
 	}
-
+	
+	/**
+	 * getter method for patient age
+	 * @return patientAge
+	 */
 	public int getPatientAge() {
 		return patientAge;
 	}
-
+	
+	/**
+	 * setter method for patient age
+	 * @param patientAge
+	 */
 	public void setPatientAge(int patientAge) {
 		this.patientAge = patientAge;
 	}
-
+	
+	/**
+	 * getter method for patient gender
+	 * @return patientGender
+	 */
 	public String getPatientGender() {
 		return patientGender;
 	}
-
+	
+	/**
+	 * setter method for patient gender
+	 * @param patientGender
+	 */
 	public void setPatientGender(String patientGender) {
 		this.patientGender=patientGender;
 	}
-
+	
+	/**
+	 * getter method for patient address
+	 * @return patientAddress
+	 */
 	public String getPatientAddress() {
 		return patientAddress;
 	}
-
+	
+	/**
+	 * setter method for patient address
+	 * @param patientAddress
+	 */
 	public void setPatientAddress(String patientAddress) {
 		this.patientAddress = patientAddress;
 	}
-
+	
+	/**
+	 * getter method for patient email
+	 * @return patientEmail
+	 */
 	public String getPatientEmail() {
 		return patientEmail;
 	}
-
+	
+	/**
+	 * setter method for patient email
+	 * @param patientEmail
+	 */
 	public void setPatientEmail(String patientEmail) {
 		this.patientEmail = patientEmail;
 	}
-
+	
+	/**
+	 * getter method for patient contact
+	 * @return patientContact
+	 */
 	public long getPatientContact() {
 		return patientContact;
 	}
 
+	/**
+	 * setter method for patient contact
+	 * @param patientContact
+	 */
 	public void setPatientContact(long patientContact) {
 		this.patientContact = patientContact;
 	}
-
+	/**
+	 * getter method for patient message
+	 * @return patientMessage
+	 */
 	public String getPatientMessage() {
 		return patientMessage;
 	}
-
+	
+	/**
+	 * setter method for patient message
+	 * @param patientMessage
+	 */
 	public void setPatientMessage(String patientMessage) {
 		this.patientMessage = patientMessage;
 	}

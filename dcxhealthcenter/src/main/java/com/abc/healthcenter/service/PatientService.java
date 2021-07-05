@@ -26,7 +26,7 @@ public interface PatientService {
 	 /**
 	  * Method to find Patient Details by using ID
 	  * @param id
-	  * @return
+	  * @return patient
 	  * @throws ResourceNotFoundException
 	  */
 	 
