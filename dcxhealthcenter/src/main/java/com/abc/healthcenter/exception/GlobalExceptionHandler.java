@@ -24,7 +24,7 @@ import com.abc.healthcenter.model.ErrorResponse;
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
-	@ExceptionHandler(value = ProductAlreadyExistingException.class)
+	@ExceptionHandler(value = ResourceAlreadyExistingException.class)
 	public ResponseEntity<ErrorResponse> handleProductAlreadyExistingException(Exception e) {
 		ErrorResponse errorResponse = new ErrorResponse();
 		errorResponse.setError(e.getMessage());

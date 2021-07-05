@@ -1,56 +1,64 @@
-package com.abc.healthcenter.entity;
-
+/**
+ * 
+ */
+package com.abc.healthcenter.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
+import com.abc.healthcenter.entity.AppointmentEntity;
+import com.abc.healthcenter.entity.PaymentEntity;
 
-@Entity
-@Table (name = "patient_tbl")
-public class PatientEntity {
-	@Id
-	@Column(name ="patient_Id")
+/**
+ * Model Class Of Patient
+ * @author Likhith  A S
+ *
+ * date: Jul 5, 2021
+
+ */
+public class Patient{
+	
 	private int patientId ;
 	
-	@Column(name = "patient_name")
+	@NotEmpty(message = "Patient Name is required")
 	private String patientName;
 	
-	@Column(name="user_name")
+	@NotEmpty(message = "Patient UserName is required")
 	private String patientuserName;
 	
-	@Column(name="password")
+	@NotEmpty(message = "Patient Password is required")
 	private String patientpassword;
 	
-	@Column(name = "patient_age")
+	@NotNull(message = "Patient Age is required")
 	private int patientAge;
 	
-	@Column(name = "patient_gender")
+	@NotEmpty(message = "Patient Gender is required")
 	private String patientGender;
 	
-	@Column(name = "patient_address")
+	@NotEmpty(message = "Patient Address is required")
 	private String patientAddress;
 	
-	@Column(name = "patient_email")
+	@NotEmpty(message = "Patient Email is required")
 	private String patientEmail;
 	
-	@Column(name = "patient_contact")
+	@NotNull(message = "Patient Contact is required")
 	private long patientContact;
 	
-	@Column(name = "patient_message")
+	@NotEmpty(message = "Patient Message is required")
 	private String patientMessage;
 	
-	@OneToMany(mappedBy = "patient", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	
 	private List <AppointmentEntity> appointments = new ArrayList <>();
 	
-	@OneToMany(mappedBy="patient", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	
 	private List<PaymentEntity> payments = new ArrayList<>();
 	
 
@@ -117,7 +125,7 @@ public class PatientEntity {
 	}
 
 	public void setPatientGender(String patientGender) {
-		this.patientGender=patientGender;
+		this.patientGender = patientGender;
 	}
 
 	public String getPatientAddress() {
@@ -152,3 +160,4 @@ public class PatientEntity {
 		this.patientMessage = patientMessage;
 	}
 }
+	

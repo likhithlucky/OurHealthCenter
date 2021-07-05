@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import com.abc.healthcenter.entity.AppointmentEntity;
 
@@ -28,13 +29,13 @@ public class Doctor{
 	@NotEmpty(message = "Email is required")	
 	private  String doctorEmail;
 
-	@NotEmpty(message = "Contact is required")	
+	@NotNull(message = "Contact is required")	
 	private long doctorContact;
 
 	@NotEmpty(message = "Gender is required")	
-	private char doctorGender;
+	private String doctorGender;
 
-	@NotEmpty(message = "Experience is required")	
+	@NotNull(message = "Experience is required")	
 	private int doctorExperience;
 
 	@NotEmpty(message = "Department is required")	
@@ -43,8 +44,8 @@ public class Doctor{
 	@NotEmpty(message = "Doctor Qualification is required")	
 	private String doctorQualification;
 	
-	@NotEmpty(message = "Addrress is required")	
-	private String doctortAddress;
+	@NotEmpty(message = "Address is required")	
+	private String doctorAddress;
 	
 	
 	private List <AppointmentEntity> appointments = new ArrayList <>();
@@ -77,12 +78,12 @@ public class Doctor{
 		this.doctorDepartment = doctorDepartment;
 	}
 
-	public String getDoctortAddress() {
-		return doctortAddress;
+	public String getDoctorAddress() {
+		return doctorAddress;
 	}
 
-	public void setDoctortAddress(String doctortAddress) {
-		this.doctortAddress = doctortAddress;
+	public void setDoctorAddress(String doctortAddress) {
+		this.doctorAddress = doctortAddress;
 	}
 
 	public List<AppointmentEntity> getAppointments() {
@@ -125,11 +126,11 @@ public class Doctor{
 		this.doctorContact = doctorContact;
 	}
 
-	public char getDoctorGender() {
+	public String getDoctorGender() {
 		return doctorGender;
 	}
 
-	public void setDoctorGender(char doctorGender) {
+	public void setDoctorGender(String doctorGender) {
 		this.doctorGender = doctorGender;
 	}
 

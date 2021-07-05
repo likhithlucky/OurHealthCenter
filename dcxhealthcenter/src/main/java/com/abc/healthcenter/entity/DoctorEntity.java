@@ -12,7 +12,12 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+/**
+ * This is Entity Class maps with doctor_tbl in the database
+ * @author admin
+ *
+ * date: Jul 5, 2021
+ */
 @Entity
 
 @Table(name="doctor_tbl")
@@ -38,7 +43,7 @@ public class DoctorEntity {
 	private long doctorContact;
 
 	@Column(name="doctor_gender")
-	private char doctorGender;
+	private String doctorGender;
 
 	@Column(name="doctor_experience")
 	private int doctorExperience;
@@ -50,7 +55,7 @@ public class DoctorEntity {
 	private String doctorQualification;
 	
 	@Column(name = "doctor_address")
-	private String doctortAddress;
+	private String doctorAddress;
 	
 	@OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	private List <AppointmentEntity> appointments = new ArrayList <>();
@@ -58,15 +63,24 @@ public class DoctorEntity {
 	
 	
 	
-
+	/**
+	 * 
+	 * @return UserName of the Doctor
+	 */
 	public String getDoctoruserName() {
 		return doctoruserName;
 	}
-
+	/**
+	 * 
+	 * @param doctoruserName
+	 */
 	public void setDoctoruserName(String doctoruserName) {
 		this.doctoruserName = doctoruserName;
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public String getDoctorpassword() {
 		return doctorpassword;
 	}
@@ -83,12 +97,12 @@ public class DoctorEntity {
 		this.doctorDepartment = doctorDepartment;
 	}
 
-	public String getDoctortAddress() {
-		return doctortAddress;
+	public String getDoctorAddress() {
+		return doctorAddress;
 	}
 
-	public void setDoctortAddress(String doctortAddress) {
-		this.doctortAddress = doctortAddress;
+	public void setDoctorAddress(String doctortAddress) {
+		this.doctorAddress = doctortAddress;
 	}
 
 	public List<AppointmentEntity> getAppointments() {
@@ -131,11 +145,11 @@ public class DoctorEntity {
 		this.doctorContact = doctorContact;
 	}
 
-	public char getDoctorGender() {
+	public String getDoctorGender() {
 		return doctorGender;
 	}
 
-	public void setDoctorGender(char doctorGender) {
+	public void setDoctorGender(String doctorGender) {
 		this.doctorGender = doctorGender;
 	}
 
