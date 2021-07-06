@@ -91,7 +91,7 @@ public class PatientServiceTest {
 			assertEquals(patient.getPatientId(),patientEntity.getPatientId());
 			assertEquals(patient.getPatientuserName(),patientEntity.getPatientuserName());
 		}
-		
+		// test for exception
 		 @Test
 	     public void testFindPatientByNameThrowingException() {
 	        
