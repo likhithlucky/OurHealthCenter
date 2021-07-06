@@ -57,7 +57,7 @@ public class PatientServiceTest {
 		assertEquals(patient.getPatientName(),patientEntity.getPatientName());
 		assertEquals(patient.getPatientId(),patientEntity.getPatientId());
 	}
-	
+	//test for exception
 	 @Test
      public void testFindPatientByIdThrowingException() {
         
