@@ -5,7 +5,7 @@ import com.abc.healthcenter.exception.ResourceNotFoundException;
 import com.abc.healthcenter.model.Doctor;
 /**
  * 
- * @author admin
+ * @author Prasad
  *
  * date: Jul 5, 2021
  */
