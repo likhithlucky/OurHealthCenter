@@ -25,7 +25,7 @@ import com.abc.healthcenter.model.Response;
 import com.abc.healthcenter.service.PatientService;
 
 /**
- * @author admin
+ * @author Likhith A S
  *
  * date: Jul 5, 2021
 
